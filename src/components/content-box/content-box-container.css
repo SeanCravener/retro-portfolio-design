@@ -1,0 +1,8 @@
+.content-box-container {
+  padding: 0.5rem;
+  background-color: #7a98ee;
+  width: 75%;
+  box-shadow: -5px 5px 5px, -2px 2px 2.5px 0.05px #c4dbf1 inset;
+  border: black 1px solid;
+  border-radius: 0.25rem;
+}

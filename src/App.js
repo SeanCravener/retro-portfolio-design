@@ -1,24 +1,15 @@
-import React, { useState } from "react";
-import "./App.css";
+import ContentBoxContainer from "./components/content-box/content-box-container";
+import ContentBox from "./components/content-box/content-box";
 
 function App() {
-  const [themeStyle, setThemeStyle] = useState("background-one");
+  const stringForTesting =
+    "Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower.";
 
   return (
-    <div
-      className={themeStyle}
-      style={{ textAlign: "center", paddingTop: "5em" }}
-    >
-      <button
-        onClick={() =>
-          themeStyle === "background-one"
-            ? setThemeStyle("background-two")
-            : setThemeStyle("background-one")
-        }
-        style={{ backgroundColor: "blue" }}
-      >
-        Click me!
-      </button>
+    <div className="App" style={{ margin: "auto" }}>
+      <ContentBoxContainer>
+        <ContentBox>{stringForTesting}</ContentBox>
+      </ContentBoxContainer>
     </div>
   );
 }
