@@ -6,7 +6,7 @@ function App() {
     "Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower. Productize. Optics accountable talk. Thought shower.";
 
   return (
-    <div className="App" style={{ margin: "auto" }}>
+    <div className="App">
       <ContentBoxContainer>
         <ContentBox>{stringForTesting}</ContentBox>
       </ContentBoxContainer>
