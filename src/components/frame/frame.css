@@ -1,0 +1,25 @@
+.frame-outer {
+    display: flex;
+    padding: .75rem .75rem 0 .75rem;
+    background-color: #7a98ee;
+    box-shadow: inset darkblue 3px -3px 5px, inset lightblue -3px 3px 5px 1px;
+    border: black 0.5px solid;
+}
+
+.frame-inner {
+    display: inline-block;
+    background-color: #7a98ee;
+    margin-bottom: .75rem;
+    box-shadow: inset darkblue 3px -3px 5px, inset lightblue -3px 3px 5px 1px, darkblue 2px -2px 7px 1px, lightblue -3px 3px 7px 1px;
+    border: black 0.5px solid;
+    padding: .75rem .75rem 0 .75rem;
+}
+
+.frame-inner-no-outer {
+    display: flex;
+    background-color: #7a98ee;
+    box-shadow: inset darkblue 3px -3px 5px, inset lightblue -3px 3px 5px 1px;
+    border: black 0.5px solid;
+    padding: 0.5rem;
+}
+
