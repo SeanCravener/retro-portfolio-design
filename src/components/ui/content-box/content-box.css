@@ -1,9 +1,0 @@
-.content-box {
-  margin-bottom: .75rem;
-  display: inline-block;
-  border: black 1px solid;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #556cc9;
-  box-shadow: -2.5px 2.5px 10px 1px darkblue inset, 2.5px -2.5px 10px 1px lightblue inset, -2px 2px 2.5px 0.05px lightblue, 2px -2px 2.5px 0.05px darkblue;
-}
