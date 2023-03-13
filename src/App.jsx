@@ -1,11 +1,12 @@
 import { ModulesContextProvider } from "./context/module-context";
-import { ThemeProvider } from "@react95/core";
+import { GlobalStyle, ThemeProvider } from "@react95/core";
 import Main from "./components/Main";
 
 function App() {
   return (
     <ModulesContextProvider>
-      <ThemeProvider matrix>
+      <ThemeProvider theme={"slate"}>
+        <GlobalStyle />
         <Main />
       </ThemeProvider>
     </ModulesContextProvider>

@@ -3,9 +3,8 @@ import { ModulesContext } from "../context/module-context";
 import { Modal, List, Frame } from "@react95/core";
 import { Computer } from "@react95/icons";
 
-function Window({ module, index }) {
-  const { selectedModules, setSelectedModules } = useContext(ModulesContext);
-  const [projectIndex, setProjectIndex] = useState(index);
+function Window({ module }) {
+  const { removeModule } = useContext(ModulesContext);
   const [width, setWidth] = useState(500);
   const [height, setHeight] = useState(650);
   const [x, setX] = useState(0);
@@ -15,7 +14,7 @@ function Window({ module, index }) {
   const [src, setSrc] = useState(module.src);
 
   const handleCloseModal = () => {
-    setSelectedModules(selectedModules.splice(projectIndex, 1));
+    removeModule(module);
   };
 
   return (
@@ -29,26 +28,29 @@ function Window({ module, index }) {
         y: 20,
       }}
       closeModal={handleCloseModal}
-      menu={[
-        {
-          name: "File",
-          list: (
-            <List>
-              {links.map((link) => {
-                return (
-                  <List.Item onClick={() => window.open(link.url, "_blank")}>
-                    View On {link.text}
-                  </List.Item>
-                );
-              })}
-              <List.Item onClick={handleCloseModal}>Close</List.Item>
-            </List>
-          ),
-        },
-      ]}
+      // menu={[
+      //   {
+      //     name: "File",
+      //     list: (
+      //       <List>
+      //         {links.map((link, index) => {
+      //           return (
+      //             <List.Item
+      //               key={index}
+      //               onClick={() => window.open(link.url, "_blank")}
+      //             >
+      //               View On {link.text}
+      //             </List.Item>
+      //           );
+      //         })}
+      //         <List.Item onClick={handleCloseModal}>Close</List.Item>
+      //       </List>
+      //     ),
+      //   },
+      // ]}
     >
       <Frame w={width - 20} h={height - 50}>
-        <iframe src={src} width="100%" height="100%">
+        <iframe src={src} width="100%" height="100%" title={title}>
           <p>Your browser does not support iframes.</p>
         </iframe>
       </Frame>
